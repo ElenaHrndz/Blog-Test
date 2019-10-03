@@ -1,4 +1,4 @@
-const autenticate = require ('./autenticate')
+const autenticate = require ('./authenticate')
 
 module.exports = {
   autenticate,
