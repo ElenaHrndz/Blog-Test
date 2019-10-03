@@ -1,4 +1,5 @@
 const authenticate = require ('./authenticate')
+
 describe('Middlewares', () => {
     describe('authenticate', () => {
         it('Should have id 1', () => {
