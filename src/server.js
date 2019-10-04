@@ -1,8 +1,8 @@
 const express = require('express')
 const axios = require('axios')
 const parser = require('body-parser')
-const { posts } = require('./src/endpoints')
-const { authenticate } = require('./src/middlewares')
+const { posts } = require('./endpoints')
+const { authenticate } = require('./middlewares')
 const app = express()
 const port = 3000
 
@@ -17,3 +17,5 @@ const postsHandlers = posts({ axios })
 app.post('/', authenticate, postsHandlers.post)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+module.exports = app
